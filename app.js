@@ -252,7 +252,7 @@ function populateStaff(subCode, machineType) {
   if (!CONFIG || !CONFIG.staff) return;
 
   const roleRequired =
-    machineType === "डोझर/एस्कॅव्हेटर"
+    machineType === "machine"
       ? "Operator"
       : "Driver";
 
