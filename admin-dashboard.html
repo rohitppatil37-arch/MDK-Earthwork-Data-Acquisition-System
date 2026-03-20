@@ -410,15 +410,17 @@ document.querySelectorAll("button").forEach(b=>b.disabled=false);
 return;
 }
 
-const url=
+const url =
 API_URL+
 "?mode=report"+
-"&type="+type+
-"&from="+from+
-"&to="+to+
-"&subdivision="+sub+
-"&token="+token;
+"&type="+encodeURIComponent(type)+
+"&from="+encodeURIComponent(from)+
+"&to="+encodeURIComponent(to)+
+"&subdivision="+encodeURIComponent(sub)+
+"&token="+encodeURIComponent(token);
 console.log("FINAL URL:", url);
+console.log("Token:", token);
+console.log("Subdivision:", sub);
 fetch(url)
 .then(res=>res.json())
 .then(data=>{
