@@ -376,8 +376,8 @@ pending:"💰 प्रलंबित रक्कम अहवाल तया
 };
 
 document.getElementById("reportText").innerText=texts[type];
-const token=localStorage.getItem("token");
-const sub=localStorage.getItem("subdivisionCode");
+const token = localStorage.getItem("token")?.trim();
+const sub = localStorage.getItem("subdivisionCode")?.trim();
 
 let from,to;
 
