@@ -269,7 +269,7 @@ function populateStaff(subCode, machineName) {
 
   // 🔥 role
   const roleRequired =
-    category === "machine" ? "Operator" : "Driver";
+    category === "Machine" ? "Operator" : "Driver";
 
   // 🔥 filter staff
   const staff = CONFIG.staff.filter(s =>
