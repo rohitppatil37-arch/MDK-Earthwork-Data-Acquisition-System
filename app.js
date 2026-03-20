@@ -252,9 +252,9 @@ function populateStaff(subCode, machineType) {
   if (!CONFIG || !CONFIG.staff) return;
 
   const roleRequired =
-    category === "Machine"
-      ? "Operator"
-      : "Driver";
+  machineData.Category === "Machine"
+    ? "Operator"
+    : "Driver";
 
   const staff = CONFIG.staff.filter(s =>
     s["Subdivision Code"] === subCode &&
